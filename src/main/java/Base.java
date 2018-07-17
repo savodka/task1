@@ -1,15 +1,32 @@
 import java.util.Scanner;
 
+/**
+ * comment
+ */
 public class Base {
     public static void main(String[] args) {
-        float var1, var2, sum;
+        float var1, var2;
+        String operator;
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the first number ");
         var1 = scanner.nextFloat();
+        System.out.println("Enter the operator ");
+        operator = scanner.next();
         System.out.println("Enter the second number ");
         var2 = scanner.nextFloat();
-        sum = var1 + var2;
-        System.out.printf("Summ is "+ "%.4f", + sum);
+
+        if (operator.equals("*")){
+            System.out.printf("= " + "%.4f", (var1 * var2));
+        }
+        if (operator.equals("/")){
+            System.out.printf("= " + "%.4f", (var1 / var2));
+        }
+        if (operator.equals("+")){
+            System.out.printf("= " + "%.4f", (var1 + var2));
+        }
+        if (operator.equals("-")){
+            System.out.printf("= " + "%.4f", (var1 - var2));
+        }
         scanner.close();
     }
 }
