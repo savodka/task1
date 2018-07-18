@@ -1,7 +1,7 @@
 import java.util.Scanner;
-
 /**
- * comment
+ * @author Mickle
+ *
  */
 public class Base {
     public static void main(String[] args) {
@@ -15,16 +15,16 @@ public class Base {
         System.out.println("Enter the second number ");
         var2 = scanner.nextFloat();
 
-        if (operator.equals("*")){
+        if (operator.equals("*")) {
             System.out.printf("= " + "%.4f", (var1 * var2));
         }
-        if (operator.equals("/")){
+        if (operator.equals("/")) {
             System.out.printf("= " + "%.4f", (var1 / var2));
         }
-        if (operator.equals("+")){
+        if (operator.equals("+")) {
             System.out.printf("= " + "%.4f", (var1 + var2));
         }
-        if (operator.equals("-")){
+        if (operator.equals("-")) {
             System.out.printf("= " + "%.4f", (var1 - var2));
         }
         scanner.close();
