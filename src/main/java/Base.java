@@ -5,27 +5,16 @@ import java.util.Scanner;
  */
 public class Base {
     public static void main(String[] args) {
-        float var1, var2;
-        String operator;
+        int var1;
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter the first number ");
-        var1 = scanner.nextFloat();
-        System.out.println("Enter the operator ");
-        operator = scanner.next();
-        System.out.println("Enter the second number ");
-        var2 = scanner.nextFloat();
-
-        if (operator.equals("*")) {
-            System.out.printf("= " + "%.4f", (var1 * var2));
-        }
-        if (operator.equals("/")) {
-            System.out.printf("= " + "%.4f", (var1 / var2));
-        }
-        if (operator.equals("+")) {
-            System.out.printf("= " + "%.4f", (var1 + var2));
-        }
-        if (operator.equals("-")) {
-            System.out.printf("= " + "%.4f", (var1 - var2));
+        System.out.println("Enter number of task: 1 - calc, 2 - string array ");
+        var1 = scanner.nextInt();
+if (var1 == 1) {
+    Calculate.calc();
+} else if (var1 == 2){
+    System.out.println("Please make second unit");
+} else {
+    System.out.println("Please enter 1 or 2");
         }
         scanner.close();
     }
