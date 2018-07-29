@@ -14,12 +14,17 @@ public class ArrayTwenty {
                 max = intArray[i];
         }
         System.out.println("Максимальный отрицательный элемент в массиве: " + max);
-
         int min = Integer.MAX_VALUE;
         for (int i = 0; i < intArray.length; i++) {
             if (min > intArray[i] && intArray[i] > 0)
                 min = intArray[i];
         }
         System.out.println("Минимальный положительный элемент в массиве: " + min);
+        /* замена переменных местами*/
+        System.out.println("min was " + min + "; max was " + max);
+        Integer c = min;
+        min = max;
+        max = c;
+        System.out.println("min is now " + min + "; max is now " + max);
     }
 }
