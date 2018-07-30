@@ -31,7 +31,6 @@ public class Base {
             for (Staff someStaff : box) {
                 System.out.println(someStaff.toString());
             }
-
             double totalweight = 0;
             double totalprice = 0;
             for (Staff someStaff : box) {
