@@ -2,6 +2,7 @@ package NewYearBox;
 
 public class Candy extends Staff {
     private Double size;
+
     public Candy(String brand, Double price, Double weight, Double size) {
         super(brand, price, weight);
         this.size = size;

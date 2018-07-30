@@ -25,17 +25,16 @@ public class Base {
             ArrayTwenty.arrtw();
         } else if (var1 == 4) {
             Candy candy1 = new Candy("Mishka", 20.4, 5.2, 10.0);
-            Jellybean jellybean1 = new Jellybean("Pepsi", 10.6,3.3,"Red");
+            Jellybean jellybean1 = new Jellybean("Pepsi", 10.6, 3.3, "Red");
             Cake cake1 = new Cake("Tort", 30.4, 500.4, "round");
-            Staff [] box = {candy1, jellybean1, cake1};
-            for (Staff someStaff: box) {
+            Staff[] box = {candy1, jellybean1, cake1};
+            for (Staff someStaff : box) {
                 System.out.println(someStaff.toString());
             }
-            for (Staff someStaff: box) {
-
-                System.out.println("Общий вес = " + someStaff.getWeight());
-                System.out.println("Общая стоимость = " + someStaff.getPrice());
-            }
+            double totalweight = candy1.getWeight() + jellybean1.getWeight() + cake1.getWeight();
+            double totalprice = candy1.getPrice() + jellybean1.getPrice() + cake1.getPrice();
+            System.out.println("Общий вес = " + totalweight);
+            System.out.println("Общая стоимость = " + totalprice);
         } else System.out.println("Please enter 1, 2, 3 or 4");
         scanner.close();
     }

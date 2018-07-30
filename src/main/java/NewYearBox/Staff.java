@@ -37,6 +37,6 @@ public abstract class Staff {
 
     @Override
     public String toString() {
-        return "brand = " + brand +", price = " + price + ", weight = " + weight;
+        return "brand = " + brand + ", price = " + price + ", weight = " + weight;
     }
 }
