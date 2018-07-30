@@ -31,8 +31,13 @@ public class Base {
             for (Staff someStaff : box) {
                 System.out.println(someStaff.toString());
             }
-            double totalweight = candy1.getWeight() + jellybean1.getWeight() + cake1.getWeight();
-            double totalprice = candy1.getPrice() + jellybean1.getPrice() + cake1.getPrice();
+
+            double totalweight = 0;
+            double totalprice = 0;
+            for (Staff someStaff : box) {
+                totalweight += someStaff.getWeight();
+                totalprice += someStaff.getPrice();
+            }
             System.out.println("Общий вес = " + totalweight);
             System.out.println("Общая стоимость = " + totalprice);
         } else System.out.println("Please enter 1, 2, 3 or 4");
