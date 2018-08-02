@@ -1,3 +1,4 @@
+import CalculatorOop.Calculation;
 import NewYearBox.Cake;
 import NewYearBox.Candy;
 import NewYearBox.Jellybean;
@@ -14,8 +15,8 @@ public class Base {
     public static void main(String[] args) {
         int var1;
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter number of task: 1 - calc, " +
-                "2 - string array, 3 - arrayTwenty, 4 - NY Gift ");
+        System.out.println("Enter number of task: 1 - calc, " + "\n" +
+                "2 - string array, 3 - arrayTwenty, 4 - NY Gift, 5 - OOP Calc ");
         var1 = scanner.nextInt();
         if (var1 == 1) {
             Calculate.calc();
@@ -39,7 +40,34 @@ public class Base {
             }
             System.out.println("Общий вес = " + totalweight);
             System.out.println("Общая стоимость = " + totalprice);
-        } else System.out.println("Please enter 1, 2, 3 or 4");
+        } else if (var1 == 5) {
+            float a, b;
+            String sign;
+            Scanner keyboard = new Scanner(System.in);
+            Calculation Cal = new Calculation();
+            System.out.println("Enter the first number");
+            a = keyboard.nextFloat();
+            System.out.println("Enter operation (+, -, * or /)");
+            sign = keyboard.next();
+            System.out.println("Enter the second number");
+            b = keyboard.nextFloat();
+
+            if (sign.equals("+")) {
+                float c = Cal.plus(a, b);
+                System.out.println("Answer " + c);
+            } else if (sign.equals("-")) {
+                float c = Cal.subtract(a, b);
+                System.out.println("Answer " + c);
+            } else if (sign.equals("*")) {
+                float c = Cal.multiply(a, b);
+                System.out.println("Answer " + c);
+            } else if (sign.equals("/")) {
+                float c = Cal.divide(a, b);
+                System.out.println("Answer " + c);
+            }
+        } else {
+            System.out.println("Please enter 1, 2, 3, 4 or 5");
+        }
         scanner.close();
     }
 }
