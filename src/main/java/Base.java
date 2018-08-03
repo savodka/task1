@@ -44,7 +44,7 @@ public class Base {
             float a, b;
             String sign;
             Scanner keyboard = new Scanner(System.in);
-            Calculation Cal = new Calculation();
+            Calculation сal = new Calculation();
             System.out.println("Enter the first number");
             a = keyboard.nextFloat();
             System.out.println("Enter operation (+, -, * or /)");
@@ -53,16 +53,16 @@ public class Base {
             b = keyboard.nextFloat();
 
             if (sign.equals("+")) {
-                float c = Cal.plus(a, b);
+                float c = сal.plus(a, b);
                 System.out.println("Answer " + c);
             } else if (sign.equals("-")) {
-                float c = Cal.subtract(a, b);
+                float c = сal.subtract(a, b);
                 System.out.println("Answer " + c);
             } else if (sign.equals("*")) {
-                float c = Cal.multiply(a, b);
+                float c = сal.multiply(a, b);
                 System.out.println("Answer " + c);
             } else if (sign.equals("/")) {
-                float c = Cal.divide(a, b);
+                float c = сal.divide(a, b);
                 System.out.println("Answer " + c);
             }
         } else {
