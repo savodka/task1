@@ -51,18 +51,18 @@ public class Base {
             sign = keyboard.next();
             System.out.println("Enter the second number");
             b = keyboard.nextFloat();
-
+            float c;
             if (sign.equals("+")) {
-                float c = cal.plus(a, b);
+                c = cal.plus(a, b);
                 System.out.println("Answer " + c);
             } else if (sign.equals("-")) {
-                float c = cal.subtract(a, b);
+                c = cal.subtract(a, b);
                 System.out.println("Answer " + c);
             } else if (sign.equals("*")) {
-                float c = cal.multiply(a, b);
+                c = cal.multiply(a, b);
                 System.out.println("Answer " + c);
             } else if (sign.equals("/")) {
-                float c = cal.divide(a, b);
+                c = cal.divide(a, b);
                 System.out.println("Answer " + c);
             }
         } else {
