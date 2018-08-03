@@ -10,11 +10,11 @@ public class ArrayTwenty {
         }
         int min = Integer.MAX_VALUE;
         int max = Integer.MIN_VALUE;
-        for (int i = 0; i < intArray.length; i++) {
-            if (max < intArray[i] && intArray[i] < 0)
-                max = intArray[i];
-            if (min > intArray[i] && intArray[i] > 0)
-                min = intArray[i];
+        for (int anIntArray : intArray) {
+            if (max < anIntArray && anIntArray < 0)
+                max = anIntArray;
+            if (min > anIntArray && anIntArray > 0)
+                min = anIntArray;
         }
         System.out.println("\n" + "Максимальный отрицательный элемент в массиве: " + max);
         System.out.println("Минимальный положительный элемент в массиве: " + min);
