@@ -2,22 +2,18 @@ package CalculatorOop;
 
 public class Calculation {
     public float plus(float a, float b) {
-        float c = a + b;
-        return c;
+        return a + b;
     }
 
     public float multiply(float a, float b) {
-        float c = a * b;
-        return c;
+        return a * b;
     }
 
     public float subtract(float a, float b) {
-        float c = a - b;
-        return c;
+        return a - b;
     }
 
     public float divide(float a, float b) {
-        float c = a / b;
-        return c;
+        return a / b;
     }
 }
