@@ -37,6 +37,5 @@ public class WordsCollection {
         }
         System.out.println(hm);
         System.out.println(hm.values());
-
     }
 }
