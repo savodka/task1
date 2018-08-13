@@ -36,6 +36,14 @@ public class WordsCollection {
             else hm.put(i, am + 1);
         }
         System.out.println(hm);
-        System.out.println(hm.values());
+        final Set<Map.Entry<String, Integer>> entries = hm.entrySet();
+
+
+                System.out.println();
+
+
+        //System.out.println("Max val: " + Collections.nCopies(hm));
+
+        /* maxKey = Collections.max(map.entrySet(), lines.Entry.comparingByValue()).getKey(); */
     }
 }
