@@ -8,4 +8,4 @@
 *.prefs
 *classpath
 *.settings
-**/bin/
+**/bin/.idea
