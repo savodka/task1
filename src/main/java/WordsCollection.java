@@ -37,13 +37,6 @@ public class WordsCollection {
         }
         System.out.println(hm);
         final Set<Map.Entry<String, Integer>> entries = hm.entrySet();
-
-
-                System.out.println();
-
-
-        //System.out.println("Max val: " + Collections.nCopies(hm));
-
-        /* maxKey = Collections.max(map.entrySet(), lines.Entry.comparingByValue()).getKey(); */
+                System.out.println(entries);
     }
 }
