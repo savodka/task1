@@ -4,12 +4,16 @@ import NewYearBox.Candy;
 import NewYearBox.Jellybean;
 import NewYearBox.Staff;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
  * @author Mickle
  * @see Calculate
  * @see WordsCalc
+ * @see Calculation
+ * @see WordsCollection
+ * @see ArrayTwenty
  */
 public class Base {
     public static void main(String[] args) {
@@ -41,29 +45,20 @@ public class Base {
             System.out.println("Общий вес = " + totalweight);
             System.out.println("Общая стоимость = " + totalprice);
         } else if (var1 == 5) {
-            float a, b;
-            String sign;
             Scanner keyboard = new Scanner(System.in);
             Calculation cal = new Calculation();
-            System.out.println("Enter the first number");
-            a = keyboard.nextFloat();
-            System.out.println("Enter operation (+, -, * or /)");
-            sign = keyboard.next();
-            System.out.println("Enter the second number");
-            b = keyboard.nextFloat();
-            float c;
-            if (sign.equals("+")) {
-                c = cal.plus(a, b);
-                System.out.println("Answer " + c);
-            } else if (sign.equals("-")) {
-                c = cal.subtract(a, b);
-                System.out.println("Answer " + c);
-            } else if (sign.equals("*")) {
-                c = cal.multiply(a, b);
-                System.out.println("Answer " + c);
-            } else if (sign.equals("/")) {
-                c = cal.divide(a, b);
-                System.out.println("Answer " + c);
+            try {
+                System.out.println("Enter the first number");
+                float a = keyboard.nextFloat();
+                System.out.println("Enter operator (+, -, * or /)");
+                String sign = keyboard.next();
+                System.out.println("Enter the second number");
+                float b = keyboard.nextFloat();
+                float result = cal.calc(sign, a, b);
+                System.out.printf("result = " + "%.4f", (result));
+            } catch (InputMismatchException e) {
+                System.err.println(e + " is not the number");
+                e.printStackTrace();
             }
         } else {
             System.out.println("Please enter 1, 2, 3, 4 or 5");

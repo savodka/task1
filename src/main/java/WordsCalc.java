@@ -13,10 +13,10 @@ public class WordsCalc {
         }
         int maxLengthString = 0;
         String longestWord = null;
-        for (int i = 0; i < strings.length; i++) {
-            if (strings[i].length() > maxLengthString) {
-                maxLengthString = strings[i].length();
-                longestWord = strings[i];
+        for (String string : strings) {
+            if (string.length() > maxLengthString) {
+                maxLengthString = string.length();
+                longestWord = string;
             }
         }
         System.out.println("The biggest word in your array: " + longestWord);

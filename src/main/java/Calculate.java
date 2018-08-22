@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
-public class Calculate {
-    public static void calc() {
+class Calculate {
+    static void calc() {
         float var1, var2;
         String operator;
         Scanner scanner = new Scanner(System.in);
