@@ -1,25 +1,32 @@
 package CalculatorOop;
 
-public class Calculation {
+import java.awt.*;
+import java.util.InputMismatchException;
 
-    private float plus(float a, float b) {
+public class Calculation extends Component {
+    public float plus(float a, float b) {
         return a + b;
     }
 
-    private float multiply(float a, float b) {
+    public float multiply(float a, float b) {
         return a * b;
     }
 
-    private float subtract(float a, float b) {
+    public float subtract(float a, float b) {
         return a - b;
     }
 
-    private float divide(float a, float b) {
+    public float divide(float a, float b) {
+        if (b == 0) {
+            throw new ArithmeticException("На ноль делить нельзя");
+        }
         return a / b;
     }
 
     public float calc(String operator, float a, float b) {
+
         float answer;
+
         switch (operator) {
             case "+":
                 answer = plus(a, b);
